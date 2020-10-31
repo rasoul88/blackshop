@@ -1,0 +1,16 @@
+body{
+    font-family: 'Open Sans Condensed';
+    padding: 20px 60px;
+    background-image: radial-gradient(#434343, #272727 ,black);
+    overflow-x: hidden;
+    color:white;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+}
+
+* {
+    box-sizing: border-box;
+}

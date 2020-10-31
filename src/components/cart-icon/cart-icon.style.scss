@@ -1,0 +1,37 @@
+.cart-icon {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 400ms ease all;
+    
+    &.stable {
+      box-shadow: 0 2px 8px 0 rgba(255, 0, 0, 0.8), 0 6px 20px 0 rgba(255, 0, 0, 0.8);
+    }
+
+    &:hover{
+      box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.4), 0 6px 20px 0 rgba(255, 255, 255, 0.4);
+    
+      .shopping-icon{
+        transform: scale(1.15);
+      }
+    }
+
+    .shopping-icon {
+      width: 24px;
+      height: 24px;
+      transition: 400ms ease all;
+    }
+  
+    .item-count {
+      position: absolute;
+      font-size: 10px;
+      font-weight: bold;
+      bottom: 12px;
+    }
+  }
+  
