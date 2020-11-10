@@ -3,15 +3,14 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config ={
-    apiKey: "AIzaSyAN2E2rnt1sNAtXU02e7lcLs06tPc8bfeo",
-    authDomain: "crwn-db-d6876.firebaseapp.com",
-    databaseURL: "https://crwn-db-d6876.firebaseio.com",
-    projectId: "crwn-db-d6876",
-    storageBucket: "crwn-db-d6876.appspot.com",
-    messagingSenderId: "345666336017",
-    appId: "1:345666336017:web:97150ca67249692f7b88b0",
-    measurementId: "G-D8YFB9EGFN"
-  }
+  apiKey: "AIzaSyBAb2KjMKNHgNu7_2tl_IrEVBgarsaMDso",
+  authDomain: "blackshop-86f70.firebaseapp.com",
+  databaseURL: "https://blackshop-86f70.firebaseio.com",
+  projectId: "blackshop-86f70",
+  storageBucket: "blackshop-86f70.appspot.com",
+  messagingSenderId: "9828841261",
+  appId: "1:9828841261:web:af40ba60eef4fd9f1b85a4"
+};
 
   export const createUserProfileDocument = async (userAuth, additionalData) => {
     if(!userAuth) return;
@@ -36,13 +35,31 @@ const config ={
     return userRef;
   };
 
-  firebase.initializeApp(config);
+export const convertCollectionsSnapshotToMap = (collections) => {
+  const transformedCollection = collections.docs.map(doc => {
+    const {title, items} = doc.data();
+    return {
+      routeName: encodeURI(title.toLowerCase()),
+      id:doc.id,
+      items,
+      title
+    };
+  })
 
-  export const auth = firebase.auth();
-  export const firestore = firebase.firestore();
+  //convert array collection to an object collection
+  return transformedCollection.reduce((accumulator, collection) => {
+    accumulator[collection.title.toLowerCase()] = collection;
+    return accumulator;
+  },{});
+}
 
-  const provider = new firebase.auth.GoogleAuthProvider();
-  provider.setCustomParameters({prompt: 'select_account'});
-  export const signInWithGoogle= () => auth.signInWithPopup(provider); 
+firebase.initializeApp(config);
 
-  export default firebase;
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
+
+const provider = new firebase.auth.GoogleAuthProvider();
+provider.setCustomParameters({prompt: 'select_account'});
+export const signInWithGoogle= () => auth.signInWithPopup(provider); 
+
+export default firebase;

@@ -1,4 +1,6 @@
-.sign-up {
+import styled from 'styled-components';
+
+export const SignupContainer = styled.div `
     display: flex;
     flex-direction: column;
     width: 500px;
@@ -7,7 +9,4 @@
     margin: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 
-    .title {
-        margin: 10px 0;
-    }
-}
+`;
