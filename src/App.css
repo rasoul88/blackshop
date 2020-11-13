@@ -1,7 +1,7 @@
 body{
     font-family: 'Open Sans Condensed';
     padding: 20px 60px;
-    background-image: radial-gradient(#434343, #272727 ,black);
+    background-image:radial-gradient(#2b2b2b, #1d1d1d ,black) ;
     overflow-x: hidden;
     color:white;
 }

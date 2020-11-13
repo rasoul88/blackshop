@@ -1,5 +1,3 @@
-//with-spinner.styles.js
-
 import styled from 'styled-components';
 
 export const SpinnerOverlay = styled.div`
