@@ -7,7 +7,11 @@ export const CheckoutItemContainer = styled.div `
     border-bottom: 1px solid darkgrey;
     padding: 15px 0;
     font-size: 20px;
-    align-items: center;    
+    align-items: center;   
+    
+    @media screen and (max-width: 800px) {
+        font-size: 90%; 
+    }
 `;
 
 export const ImageContainer = styled.div `
@@ -33,6 +37,9 @@ export const QuantityContainer = styled.span `
 
         &:hover{
           transform: scale(1.35);
+          @media screen and (max-width: 800px) {
+            transform: unset; 
+          }
         }
     }
 
@@ -43,7 +50,6 @@ export const QuantityContainer = styled.span `
 
 export const TextContainer = styled.span `
     width: 24%;
-
 `;
 
 export const RemoveButtonContainer = styled.span `

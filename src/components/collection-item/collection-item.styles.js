@@ -7,6 +7,12 @@ export const AddButton = styled(CustomButton)`
     position: absolute;
     top: 255px;
     display: none;
+
+    @media screen and (max-width : 800px) {
+      opacity: 0.85;
+      display: flex;
+    }
+
 `;
 
 export const CollectionFooterContainer = styled.div `
@@ -35,12 +41,16 @@ export const CollectionItemContainer = styled.div `
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4); // add
     border-radius: 7px 7px 7px 7px;
-    overflow: hidden;  
+    overflow: hidden;
     
     &:hover { 
       cursor: pointer;
       transform: scale(1.05);
       transition: transform 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+
+      @media screen and (max-width : 800px) {
+        transform: scale(1);
+      }
 
       ${BackgroundImage}{
         opacity: 0.8;
@@ -50,7 +60,10 @@ export const CollectionItemContainer = styled.div `
         opacity: 0.85;
         display: flex;
       }
+    }
 
+    @media screen and (max-width : 800px) {
+      width: 45vw;
     }
 `;
 
@@ -60,7 +73,16 @@ export const CollectionItemContainer = styled.div `
 export const NameContainer = styled.span `
     width: 90%;
     margin-bottom: 15px;
+
+    @media screen and (max-width : 800px) {
+      width: 80%;
+      padding-left: 3px;
+    }
 `;
 export const PriceContainer = styled.span `
     width: 10%;
+
+    @media screen and (max-width : 800px) {
+      width: 20%;
+    }
 `;

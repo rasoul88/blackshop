@@ -1,12 +1,13 @@
 import styled, { css } from 'styled-components';
 
 const subColor = 'grey';
-const mainColor = 'black';
+// const mainColor = 'black';
 
 const shrinkLabelStyles = css`
   top: -22px;
   font-size: 18px;
-  color: ${mainColor};
+  ${'' /* color: ${mainColor}; */}
+  color: gold;
 `;
 const getShrinkStyle = props => {
     return props.shrink ? shrinkLabelStyles : null;

@@ -21,6 +21,11 @@ const getInvertedStyle = (props) => {
         display: flex;
         justify-content: center;
 
+        @media screen and (max-width : 480px) {
+          min-width: 155px;
+          padding: 0 10px;
+        }
+
         &:hover {
           background-color: black;
           color: white;
@@ -55,7 +60,7 @@ export const CustomButtonContainer = styled.button`
     border-radius: 7px;
     letter-spacing: 0.5px;
     line-height: 50px;
-    padding: 0 35px 0 35px;
+    padding: 0 35px;
     font-size: 15px;
     background-color: black;
     color: white;
@@ -67,6 +72,10 @@ export const CustomButtonContainer = styled.button`
     transition: 600ms ease all;
     outline: none;
 
+    @media screen and (max-width : 392px) {
+      min-width:145px;
+    }
+
     &:hover {
       background-color: white;
       color: black;
@@ -74,7 +83,7 @@ export const CustomButtonContainer = styled.button`
     }
 
     &:active {
-      transform: scale(.8);
+      transform: scale(.9);
       box-shadow: none;
     }
 

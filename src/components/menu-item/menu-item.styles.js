@@ -19,18 +19,32 @@ export const ContentContainer = styled.div `
     position: absolute;
     color: #4a4a4a;
 
+    @media screen and (max-width : 800px) {
+      transform: scale(.75);
+    }
+
     h1 {
         font-weight: bold;
         margin-bottom: 6px;
         font-size: 22px;
+
+        @media screen and (max-width : 800px) {
+          font-size: 26px;
+          font-weight: bolder;
+        }
 
     }
 
     span {
         font-weight: lighter;
         font-size: 16px;
-
+        
+        @media screen and (max-width : 800px) {
+          font-size: 18px;
+          font-weight: normal;
+        }
     }
+
 `;
 
 export const BackgroundImage = styled.div `
@@ -51,6 +65,10 @@ export const MenuItemContainer = styled.div `
     overflow: hidden;
     border-radius: 7px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    
+    @media screen and (max-width : 480px) {
+      border-radius: 4px;
+    }
 
     &:hover {
         cursor: pointer;
@@ -74,4 +92,8 @@ export const MenuItemContainer = styled.div `
     }
 
     ${getSizeStyles}
+
+    @media screen and (max-width : 800px) {
+        height: 200px;
+    }
 `;

@@ -8,6 +8,10 @@ export const ItemsContainer = styled.div `
     & .collection-item {
         margin-bottom: 30px;
     }
+
+    @media screen and (max-width : 800px) {
+        grid-template-columns: 1fr 1fr;
+    }
 `;
 
 export const CollectionPageContainer = styled.div `

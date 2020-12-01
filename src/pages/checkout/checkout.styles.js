@@ -5,12 +5,20 @@ export const TextContainer = styled.div `
     margin-top: 40px;
     font-size: 35px;
     color:white;
+
+    @media screen and (max-width: 800px) {
+        font-size: 150%; 
+    }
 `;
 
 export const TotalContainer = styled.div `
     margin-top: 30px;
     margin-left: auto;
     font-size: 36px;
+
+    @media screen and (max-width: 800px) {
+        font-size: 150%; 
+    }
 `;
 
 export const HeaderBlockContainer = styled.div `
@@ -19,6 +27,14 @@ export const HeaderBlockContainer = styled.div `
 
     &:last-child {
         width: 8%;
+
+        @media screen and (max-width: 800px) {
+         width: 12%
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        width: 22%
     }
 `;
 
@@ -41,5 +57,9 @@ export const CheckoutContainer = styled.div `
     button {
       margin-left: auto;
       margin-top: 50px;
+    }
+
+    @media screen and (max-width: 800px) {
+        width: 90%;
     }
 `;

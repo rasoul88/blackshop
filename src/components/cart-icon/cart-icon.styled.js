@@ -33,6 +33,7 @@ export const CartIconContainer = styled.div`
 
     &:hover{
       box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.4), 0 6px 20px 0 rgba(255, 255, 255, 0.4);
+      
     
       ${ShoppingIcon}{
         transform: scale(1.15);
