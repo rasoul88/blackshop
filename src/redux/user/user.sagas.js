@@ -20,7 +20,7 @@ export function* signInWithGoogle() {
         const {user} = yield auth.signInWithPopup(googleProvider);
         yield getSnapshotFromUserAuth(user)
     } catch (error) {
-        yield put(signInFailure(error))
+        yield put(signInFailure(error));
     }
 }
 

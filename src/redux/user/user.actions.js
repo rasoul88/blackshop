@@ -19,10 +19,6 @@ export const signInFailure = (error) => ({
     payload : error
 })
 
-// export const checkUserSession = () => ({
-//     type : UserActionTypes.CHECK_USER_SESSION
-// })
-
 export const removeCurrentUser = () => ({
     type : UserActionTypes.REMOVE_CURRENT_USER
 })
@@ -38,4 +34,8 @@ export const signUpSuccess = ({user, additinalData}) => ({
 export const signUpFailure = (error) => ({
     type : UserActionTypes.SIGN_UP_FAILURE,
     payload : error
+})
+
+export const clearError = () => ({
+    type : UserActionTypes.CLEAR_ERROR,
 })

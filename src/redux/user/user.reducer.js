@@ -24,6 +24,11 @@ const userReducer = ( state = INITIAL_STATE, action ) => {
                 ...state,
                 currentUser: null
             }
+        case UserActionTypes.CLEAR_ERROR:
+            return{
+                ...state,
+                error: null
+            }
         default :
             return state;
     }
