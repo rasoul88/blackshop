@@ -41,6 +41,12 @@ export const QuantityContainer = styled.span `
             transform: unset; 
           }
         }
+
+        &:active{
+            @media screen and (max-width: 800px) {
+                transform: scale(1.35); 
+            }
+        }
     }
 
     span {
