@@ -24,6 +24,7 @@ const getInvertedStyle = (props) => {
         @media screen and (max-width : 480px) {
           min-width: 155px;
           padding: 0 10px;
+          border: none;
         }
 
         &:hover {
@@ -31,6 +32,13 @@ const getInvertedStyle = (props) => {
           color: white;
           border: none;
           box-shadow: 0 4px 8px 0px rgba(255, 0, 0, 0.568), 0 6px 20px 0px rgba(255, 0, 0, 0.568);
+         
+          @media screen and (max-width : 480px) {
+            background-color: white;
+            color: black;
+            border: unset;
+            box-shadow: unset ;
+          }
         }
         &:active {
           box-shadow: none;
