@@ -42,7 +42,7 @@ export const QuantityContainer = styled.span `
           }
         }
 
-        &:active{
+        &:active {
             @media screen and (max-width: 800px) {
                 transform: scale(1.35); 
             }

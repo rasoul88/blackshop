@@ -95,9 +95,7 @@ export const CustomButtonContainer = styled.button`
       box-shadow: none;
       outline: none;
     }
-    &:focus {
-      outline: none;
-    }
+
   
 
     ${getSingInStyle}
