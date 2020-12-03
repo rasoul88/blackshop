@@ -42,7 +42,7 @@ export const CollectionItemContainer = styled.div `
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4); // add
     border-radius: 7px 7px 7px 7px;
     overflow: hidden;
-    
+
     &:hover { 
       cursor: pointer;
       transform: scale(1.05);

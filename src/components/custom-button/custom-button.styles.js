@@ -33,7 +33,7 @@ const getInvertedStyle = (props) => {
           border: none;
           box-shadow: 0 4px 8px 0px rgba(255, 0, 0, 0.568), 0 6px 20px 0px rgba(255, 0, 0, 0.568);
          
-          @media screen and (max-width : 480px) {
+          @media screen and (max-width : 800px) {
             background-color: white;
             color: black;
             border: unset;
@@ -93,7 +93,12 @@ export const CustomButtonContainer = styled.button`
     &:active {
       transform: scale(.9);
       box-shadow: none;
+      outline: none;
     }
+    &:focus {
+      outline: none;
+    }
+  
 
     ${getSingInStyle}
     ${getInvertedStyle}

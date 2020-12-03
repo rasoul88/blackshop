@@ -21,4 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     * {
         box-sizing: border-box;
     }
+    
+    *:focus { outline: none}
+    input, textarea, button, select, a, div { -webkit-tap-highlight-color: rgba(0,0,0,0); }
 `
