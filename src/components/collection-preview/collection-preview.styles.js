@@ -12,10 +12,11 @@ export const Preview = styled.div `
 `;
 
 export const Title = styled.h1 `
-    width: auto;
+    width: 100px;
     cursor: pointer;
     font-size: 28px;
     margin-bottom: 25px;
+    text-align: center;
 
     &:hover{
       color: gray;

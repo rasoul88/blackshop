@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 import CollectionItem from '../collection-item/collection-item.component'
+import MoreButton from "../more-button/more-button.component";
 
 import { Preview, Title, CollectionPreviewContainer } from "./collection-preview.styles";
 
@@ -15,6 +16,7 @@ const CollectionPreview = ({title, items, history, match, routeName }) => (
               ))  
             }
         </Preview>
+        <MoreButton onClick={() => history.push(`${match.path}/${routeName}`)}> more &rarr; </MoreButton>
     </CollectionPreviewContainer>
 )
 
