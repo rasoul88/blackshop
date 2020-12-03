@@ -1,6 +1,6 @@
 import React from 'react';
 import { ErrorImageOverlay, ErrorImageContainer, ErrorImageText } from "./error-boundary.styles";
-
+import Apolo from "../../assets/A040Lxr.PNG";
 class ErrorBoundary extends React.Component {
     constructor(){
         super();
@@ -25,7 +25,8 @@ class ErrorBoundary extends React.Component {
             return (
                 <ErrorImageOverlay>
                     {/* https://i.imgur.com/qIufhof.png */}
-                    <ErrorImageContainer imageUrl={'https://i.imgur.com/A040Lxr.png'} />
+                    {/* <ErrorImageContainer imageUrl={'https://i.imgur.com/A040Lxr.png'} /> */}
+                    <ErrorImageContainer imageUrl={Apolo} />
                     <ErrorImageText> <p>Sorry!!!</p><br/> Because of using firebase to implement back-end and authentication you cannot use this page with Iran🇮🇷 IP range, please use a <span>VPN</span> </ErrorImageText>
                 </ErrorImageOverlay>
             )

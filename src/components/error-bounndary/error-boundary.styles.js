@@ -28,9 +28,9 @@ export const ErrorImageText = styled.h2`
     padding:0;
     margin:0 ;
     font-size: 28px;
-    color: red;
+    color: gold;
   }
   span {
-    color: gold;
+    color: red;
   }
 `;
