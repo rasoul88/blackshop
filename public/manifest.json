@@ -1,5 +1,5 @@
 {
-  "short_name": "React App",
+  "short_name": "Black Shop",
   "name": "Black Shop",
   "icons": [
     {
@@ -9,7 +9,6 @@
     },
     {
       "src": "crown.svg",
-      "type": "icon/svg",
       "sizes": "any"
     }
   ],
