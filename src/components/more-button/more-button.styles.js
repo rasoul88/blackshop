@@ -21,6 +21,7 @@ export const MoreButtonContainer = styled.button`
     border-radius: 50px;
     outline: none;
     transition : all .5s ease;
+    backface-visibility: hidden;
 
     &:hover {
         background-color: gold;

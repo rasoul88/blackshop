@@ -48,5 +48,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "compression-webpack-plugin": "^7.0.0",
+    "webpack": "^4.42.0"
   }
 }
