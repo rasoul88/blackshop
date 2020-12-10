@@ -1,4 +1,6 @@
 import React from 'react';
+import {useTransition, animated} from 'react-spring';
+import * as easings from 'd3-ease'
 import { auth } from '../../firebase/firebase.utils';
 
 import { removeCurrentUser } from "../../redux/user/user.actions";
@@ -13,7 +15,15 @@ import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
 import { HeaderContainer, LogoContainer, CrownLogo, OptionsContainer, OptionLink } from "./heder.styles";
 
-const Header = ({ currentUser, hidden, dispatch }) => (
+const Header = ({ currentUser, hidden, dispatch }) => {
+  const transitions = useTransition(!hidden, null, {
+    config: { duration: 250, easing: easings.easeBackOut.overshoot(1.2) },
+    from: { position: 'absolute', right: '0px',opacity: 0 , transform: 'scale(0)' },
+    enter: { opacity: 1, transform: 'scale(1)'  },
+    leave: { opacity: 0 , transform: 'scale(0)' },
+  })
+
+  return(
   <HeaderContainer>
     <LogoContainer to='/'>
       <CrownLogo />
@@ -40,9 +50,12 @@ const Header = ({ currentUser, hidden, dispatch }) => (
       )}
       <CartIcon />
     </OptionsContainer>
-    {hidden ? null : <CartDropdown />}
+    {transitions.map(({ item, key, props }) =>
+      item && <animated.div key={key} style={props}><CartDropdown /></animated.div>
+    )}
+    {/* {hidden ? null : <CartDropdown />} */}
   </HeaderContainer>
-);
+)};
 
 const mapStateToProps = createStructuredSelector ({
   currentUser: selectCurrentUser,
