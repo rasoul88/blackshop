@@ -30,13 +30,24 @@ export const CartIconContainer = styled.div`
     cursor: pointer;
     border-radius: 50%;
     transition: 400ms ease all;
+    backface-visibility: hidden;
 
     &:hover{
       box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.4), 0 6px 20px 0 rgba(255, 255, 255, 0.4);
+      @media screen and (max-width : 800px) {
+        box-shadow: none;
+      }
       
     
       ${ShoppingIcon}{
         transform: scale(1.15);
+      }
+    }
+
+    &:active{
+      @media screen and (max-width : 800px) {
+        box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.4), 0 6px 20px 0 rgba(255, 255, 255, 0.4);
+        transform: translateY(4px);
       }
     }
 
